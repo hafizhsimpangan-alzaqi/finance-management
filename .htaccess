@@ -1,0 +1,6 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule (^|/)\. - [F,L]
+<FilesMatch "^(connection|helpers|guard)\.php$|\.(md|sql|ini|log|bak)$">
+    Require all denied
+</FilesMatch>
